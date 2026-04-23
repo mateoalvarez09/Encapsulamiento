@@ -1,0 +1,14 @@
+class CuentaBancaria:
+    def __init__(self, titular, saldo, numero_cuenta):
+        self._titular = titular
+        self._saldo = saldo
+        self._numero_cuenta = numero_cuenta
+
+    def depositar(self, monto):
+        self._saldo += monto
+
+    def retirar(self, monto):
+        if self._saldo - monto >= 0:
+            self._saldo -= monto
+        else:
+            print("Saldo insuficiente")
