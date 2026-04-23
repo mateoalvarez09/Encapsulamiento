@@ -1,0 +1,11 @@
+class Juego:
+    def __init__(self, nombre, genero, precio):
+        self._nombre = nombre
+        self._genero = genero
+        self._precio = precio
+
+    def mostrar_info(self):
+        return f"{self._nombre} - {self._genero} - ${self._precio}"
+
+    def en_oferta(self, valor):
+        return self._precio < valor
